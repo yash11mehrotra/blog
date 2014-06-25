@@ -1,0 +1,10 @@
+<p>TITLE:::</p>
+<%= @article.title %>
+<p>TEXT::::::::::</p>
+<%= @article.text %>
+<%=link_to "Edit", edit_article_path(@article) %>
+<%=link_to "Delete", @article, method: :delete %>
+<%= link_to "Index", articles_path %>
+<%= link_to "New", new_article_path %>
+
+ 
