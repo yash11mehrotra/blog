@@ -1,4 +1,10 @@
 Blog::Application.routes.draw do
+  # get "comments/index"
+  # get "comments/create"
+  # get "comments/show"
+  # get "comments/edit"
+  # get "comments/destroy"
+  # get "comments/new"
  # match '/articles', to: 'articles#create', via: 'post'
  #  get "articles/new"=>"articles#new"
  #  get "articles/index"
@@ -9,7 +15,9 @@ Blog::Application.routes.draw do
  #  post "articles"=> "articles#create"
  #  "/" => "articles#new"
  
- resources :articles
+ resources :articles do
+  resources :comments
+end
 
 
   # The priority is based upon order of creation: first created -> highest priority.

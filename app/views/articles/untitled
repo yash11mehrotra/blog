@@ -1,0 +1,43 @@
+<!-- 
+<%= @article.comments.each do |c| %>
+<p>Commenter: <%= c.commenter %></p>
+<p>Body: <%= c.body %></p>
+
+<%= link_to "Delete", article_comment_path(@article, c) , method: :delete%>
+
+ <%= link_to "edit", edit_article_comment_path(@article, c)%>
+ <%end%> -->
+
+
+
+<%= @article.comments.each do |c| %>
+	<p>Commenter: <%= c.commenter %>
+	Body: <%= c.body %></p>
+<%end%>
+
+
+
+ <p>
+<%= f.label :commenter %>
+<%= f.text_field :commenter %>
+</p>
+<p>
+<%= f.label :body %>
+<%= f.text_area :body %>
+</p>
+
+
+<%= form_for([@comment]) do |f| %>
+<p>
+<%= f.label :commenter %>
+<%= f.text_field :commenter %>
+</p>
+<p>
+<%= f.label :body %>
+<%= f.text_area :body%>
+</p>
+
+
+<%= f.submit %>
+
+<% end %>

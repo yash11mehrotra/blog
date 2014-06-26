@@ -20,6 +20,8 @@ class ArticlesController < ApplicationController
           render 'new'
          #redirect_to root_path
       end
+
+
   end
 
   def edit
@@ -35,6 +37,7 @@ class ArticlesController < ApplicationController
 
   def show
     @article = Article.find(params[:id])
+    
 
   end
 
